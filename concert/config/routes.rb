@@ -1,11 +1,11 @@
 Concert::Application.routes.draw do
-  resources :type_users
+  resources :bands
 
 
-  resources :user_roles
+  resources :name_concerts
 
 
-  resources :roles
+  resources :sites
 
 
   # The priority is based upon order of creation:

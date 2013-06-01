@@ -11,29 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130528230635) do
+ActiveRecord::Schema.define(:version => 20130526175751) do
 
-  create_table "roles", :force => true do |t|
-    t.integer  "rol_id"
-    t.string   "rol"
+  create_table "bands", :force => true do |t|
+    t.integer  "band_id"
+    t.string   "name"
+    t.string   "member"
+    t.string   "style"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "type_users", :force => true do |t|
-    t.string   "nombre"
-    t.date     "finicio"
-    t.string   "correo"
-    t.string   "clave"
-    t.string   "rol_defecto"
-    t.integer  "tur_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+  create_table "name_concerts", :force => true do |t|
+    t.integer  "concert_id"
+    t.string   "place"
+    t.string   "band"
+    t.string   "person"
+    t.datetime "start_date"
+    t.datetime "final_date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
-  create_table "user_roles", :force => true do |t|
-    t.integer  "tur_id"
-    t.integer  "rol_id"
+  create_table "sites", :force => true do |t|
+    t.integer  "site_id"
+    t.string   "name"
+    t.string   "address"
+    t.string   "district"
+    t.string   "map"
+    t.integer  "phone"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
