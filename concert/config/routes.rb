@@ -1,11 +1,20 @@
 Concert::Application.routes.draw do
-  resources :bands
+  get "welcome/index"
+
+  resources :usuarios
 
 
-  resources :name_concerts
+  resources :dtypes
 
 
-  resources :sites
+  resources :utypes
+
+
+  resources :users
+
+  resources :usuario_sessions
+  match 'login' => 'usuario_sessions#new', as: :login
+  match 'logout' => 'usuario_sessions#destroy', as: :logout
 
 
   # The priority is based upon order of creation:
@@ -57,7 +66,7 @@ Concert::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 

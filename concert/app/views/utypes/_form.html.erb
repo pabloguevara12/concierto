@@ -1,0 +1,22 @@
+<%= form_for(@utype) do |f| %>
+  <% if @utype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@utype.errors.count, "error") %> prohibited this utype from being saved:</h2>
+
+      <ul>
+      <% @utype.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <%= f.label :Tipo_de_Usuarios %><br />
+    <%= f.text_field :tdu %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

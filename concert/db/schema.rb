@@ -11,35 +11,43 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130526175751) do
+ActiveRecord::Schema.define(:version => 20130529011639) do
 
-  create_table "bands", :force => true do |t|
-    t.integer  "band_id"
-    t.string   "name"
-    t.string   "member"
-    t.string   "style"
+  create_table "dtypes", :force => true do |t|
+    t.string   "tdd"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "name_concerts", :force => true do |t|
-    t.integer  "concert_id"
-    t.string   "place"
-    t.string   "band"
-    t.string   "person"
-    t.datetime "start_date"
-    t.datetime "final_date"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "users", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "dtype_id"
+    t.integer  "utype_id"
+    t.string   "name"
+    t.string   "apaterno"
+    t.string   "amaterno"
+    t.string   "gender"
+    t.string   "doc_identity"
+    t.string   "num_identity"
+    t.string   "mail1"
+    t.string   "mail2"
+    t.string   "string"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "tdu"
   end
 
-  create_table "sites", :force => true do |t|
-    t.integer  "site_id"
-    t.string   "name"
-    t.string   "address"
-    t.string   "district"
-    t.string   "map"
-    t.integer  "phone"
+  create_table "usuarios", :force => true do |t|
+    t.string   "username",         :null => false
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "utypes", :force => true do |t|
+    t.string   "tdu"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
