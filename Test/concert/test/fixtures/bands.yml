@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  band_id: 1
+  name: MyString
+  member: MyString
+  style: MyString
+
+two:
+  band_id: 1
+  name: MyString
+  member: MyString
+  style: MyString
