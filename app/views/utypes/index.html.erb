@@ -1,0 +1,25 @@
+<h1>Listing utypes</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Tdu</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @utypes.each do |utype| %>
+  <tr>
+    <td><%= utype.id %></td>
+    <td><%= utype.tdu %></td>
+    <td><%= link_to 'Show', utype %></td>
+    <td><%= link_to 'Edit', edit_utype_path(utype) %></td>
+    <td><%= link_to 'Destroy', utype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Utype', new_utype_path %>
