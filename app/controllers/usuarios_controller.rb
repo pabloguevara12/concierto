@@ -10,6 +10,7 @@ class UsuariosController < ApplicationController
     end
   end
 
+
   # GET /usuarios/1
   # GET /usuarios/1.json
   def show
@@ -31,6 +32,9 @@ class UsuariosController < ApplicationController
       format.json { render json: @usuario }
     end
   end
+
+  
+
 
   # GET /usuarios/1/edit
   def edit
@@ -68,6 +72,13 @@ class UsuariosController < ApplicationController
       end
     end
   end
+
+def validates_password
+    @usuario.new
+    if form.render[:crypted_password] != form.render[:password_confirmation]
+      App.alert("Su password no coincide, vuelvalo a intentar")
+    end
+ end
 
   # DELETE /usuarios/1
   # DELETE /usuarios/1.json
