@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nombre: MyString
+  finicio: 2013-05-28
+  correo: MyString
+  clave: MyString
+  rol_defecto: MyString
+  tur_id: 1
+
+two:
+  nombre: MyString
+  finicio: 2013-05-28
+  correo: MyString
+  clave: MyString
+  rol_defecto: MyString
+  tur_id: 1
