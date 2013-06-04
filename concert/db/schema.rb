@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130526175751) do
+ActiveRecord::Schema.define(:version => 20130602205258) do
 
   create_table "bands", :force => true do |t|
     t.integer  "band_id"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(:version => 20130526175751) do
     t.string   "style"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "districts", :force => true do |t|
+    t.string   "id_district"
+    t.string   "district"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "name_concerts", :force => true do |t|
@@ -33,6 +40,13 @@ ActiveRecord::Schema.define(:version => 20130526175751) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "roles", :force => true do |t|
+    t.integer  "rol_id"
+    t.string   "rol"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "sites", :force => true do |t|
     t.integer  "site_id"
     t.string   "name"
@@ -40,6 +54,24 @@ ActiveRecord::Schema.define(:version => 20130526175751) do
     t.string   "district"
     t.string   "map"
     t.integer  "phone"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "type_users", :force => true do |t|
+    t.string   "nombre"
+    t.date     "finicio"
+    t.string   "correo"
+    t.string   "clave"
+    t.string   "rol_defecto"
+    t.integer  "tur_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "user_roles", :force => true do |t|
+    t.integer  "tur_id"
+    t.integer  "rol_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

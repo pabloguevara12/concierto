@@ -1,4 +1,7 @@
 Concert::Application.routes.draw do
+  resources :districts
+
+
   resources :bands
 
 
