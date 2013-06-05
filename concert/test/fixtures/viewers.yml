@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  v_id: 1
+  concert_id: MyString
+  integer: MyString
+  user_id: MyString
+  integer: MyString
+
+two:
+  v_id: 1
+  concert_id: MyString
+  integer: MyString
+  user_id: MyString
+  integer: MyString
