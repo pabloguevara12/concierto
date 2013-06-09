@@ -21,18 +21,18 @@
       Usuarios de la banda
   	</td>
   </tr>
-  <% @band.users.each do |user| %>
+  <% @band.usuarios.each do |usuario| %>
   <tr>
   	<td>&nbsp;</td>
   	<td>
-      <%= user.name %>
+      <%= usuario.name %>
   	</td>
   </tr>
-<% end %>
+  <% end %>
 
 </table>
 
 
-<%= link_to 'Add_user', add_user_band_path(@band) %> |
+<%= link_to 'Add_usuario', add_usuario_band_path(@band) %> |
 <%= link_to 'Edit', edit_band_path(@band) %> |
 <%= link_to 'Back', bands_path %>

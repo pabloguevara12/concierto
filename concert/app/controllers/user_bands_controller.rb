@@ -1,2 +1,0 @@
-class UserBandsController < ApplicationController
-end

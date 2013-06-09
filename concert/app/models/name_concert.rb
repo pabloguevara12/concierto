@@ -1,5 +1,11 @@
 class NameConcert < ActiveRecord::Base
-  attr_accessible :band, :concert_id, :final_date, :person, :place, :start_date
+attr_accessible :concert_id, :final_date, :user_id, :place, :start_date, :band_id
+
+has_many :bands
+has_many :usuarios
+
+belongs_to :usaurio
+belongs_to :band
 belongs_to :site
 
 
