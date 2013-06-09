@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
 <html>
@@ -5,11 +6,13 @@
 	<meta charset="UTF-8">
 	<title>Social RED</title>
 	
-	<link rel="stylesheet" href="/css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
 	
 	<%= stylesheet_link_tag    "application", :media => "all" %>
 	<%= javascript_include_tag "application" %>
 	<%= csrf_meta_tags %>
+
+
 
 	<style type="text/css">
 
@@ -22,9 +25,10 @@
 	    border: none;
 	    outline: none;
 	}
-/*
-	
+
+	/*
 	.menu {
+		
 	    height: 40px;
 	    width: 505px;
 
@@ -34,12 +38,13 @@
 	    background: -o-linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
 	    background: -ms-linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
 	    background: linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
-
+		
 	    -webkit-border-radius: 5px;
 	    -moz-border-radius: 5px;
 	    border-radius: 5px;
 	}
 	*/
+
 	.menu li {
 	    position: relative;
 	    list-style: none;
@@ -48,7 +53,6 @@
 	    height: 40px;
 	}
 	
-
 	/*
 	.menu li a {
 	    display: block;
@@ -79,9 +83,7 @@
 	.menu li:last-child a{ border-right: none; }
 
 	.menu li:hover > a { color: #8fde62; }
-
 	
-
 	.menu ul {
 	    position: absolute;
 	    top: 40px;
@@ -133,27 +135,16 @@
 
 	.menu ul li:last-child a { border: none; }
 
-	
-
 	</style>
+
+
+
 
 	</head>
 <body>
 	<div class="header">
 		<div>
 			<ul class="menu">
-			<!--
-				<li>
-					<a href="/person_types">Tipo de usuarios</a>
-				</li>
-				<li>
-					<a href="/sexes">Sexo</a>
-				</li>
-				<li>
-					<a href="/identity_document_types">Tipo de Doc de Indent.</a>
-				</li>
-
-			-->
 				<li>
 					<a href="/users">Users</a>
 					<ul>
@@ -178,7 +169,7 @@
 					<a href="/dtypes">T Doc.</a>
 				</li>
 			</ul>
-			<a href="index.html" class="logo"><img src="/images/logo.png" alt="logo"></a>
+			<a href="index.html" class="logo" style="position:relative;top:30px;left:100px;z-index:-1;"><img src="images/logo.png" alt="logo"></a>
 		</div>
 	</div>
 	<div class="body">
@@ -210,3 +201,4 @@
 	</div>
 </body>
 </html>
+	
