@@ -18,8 +18,8 @@ validates :apaterno, :presence => true
 validates :amaterno, :presence => true
 validates_confirmation_of :email
 validate :check_password
-validates :email, :uniqueness
-validates :num_identity, :uniqueness
+#validates :email, :uniqueness
+#validates :num_identity, :uniqueness
 
 has_many :band_usuarios
 has_many :bands, :through => :band_usuarios
