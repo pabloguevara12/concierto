@@ -1,12 +1,12 @@
-<h1>Listing name_concerts</h1>
+<h1>Lista de Conciertos</h1>
 
 <table>
   <tr>
-    <th>Place</th>
-    <th>Band</th>
-    <th>Person</th>
-    <th>Start date</th>
-    <th>Final date</th>
+    <th>LUGAR</th>
+    <th>BANDA</th>
+    <th>USUARIO</th>
+    <th>INICIO</th>
+    <th>FINAL</th>
     <th></th>
     <th></th>
     <th></th>
@@ -20,13 +20,13 @@
     <td><%= name_concert.person %></td>
     <td><%= name_concert.start_date %></td>
     <td><%= name_concert.final_date %></td>
-    <td><%= link_to 'Show', name_concert %></td>
-    <td><%= link_to 'Edit', edit_name_concert_path(name_concert) %></td>
-    <td><%= link_to 'Destroy', name_concert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Mostrar', name_concert %></td>
+    <td><%= link_to 'Editar', edit_name_concert_path(name_concert) %></td>
+    <td><%= link_to 'Eliminar', name_concert, method: :delete, data: { confirm: 'Estas Seuro! Che?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Name concert', new_name_concert_path %>
+<%= link_to 'New name_concert', new_name_concert_path %>

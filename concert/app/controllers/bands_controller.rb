@@ -1,4 +1,10 @@
 class BandsController < ApplicationController
+
+  # Creado para crear agregar nuevos usuarios como miembros de la banda
+  def add_user
+    @band = Band.find(params[:id])
+  end
+
   # GET /bands
   # GET /bands.json
   def index

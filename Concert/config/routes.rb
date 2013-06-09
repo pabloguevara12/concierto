@@ -1,4 +1,16 @@
 Concert::Application.routes.draw do
+
+  resources :user_bands
+
+  resources :bands do
+    member do
+      get "add_user"
+    end
+  end  
+
+  root :to => "usuarios#index"
+
+
   resources :viewers
 
 
@@ -22,11 +34,21 @@ Concert::Application.routes.draw do
 
   resources :users
 
+<<<<<<< HEAD
   resources :bands
 
   resources :sites
 
   resources :name_concerts
+=======
+
+  resources :bands
+
+  resources :districts
+
+   resources :name_concerts
+
+>>>>>>> 141431b5f922ce771b6eadb7e633ad571ca5f874
 
   resources :usuario_sessions
   match 'login' => 'usuario_sessions#new', as: :login

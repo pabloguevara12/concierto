@@ -44,7 +44,7 @@ class NameConcertsController < ApplicationController
 
     respond_to do |format|
       if @name_concert.save
-        format.html { redirect_to @name_concert, notice: 'Name concert was successfully created.' }
+        format.html { redirect_to @name_concert, notice: 'Nombre del concierto Creado correctamente.' }
         format.json { render json: @name_concert, status: :created, location: @name_concert }
       else
         format.html { render action: "new" }
@@ -60,10 +60,10 @@ class NameConcertsController < ApplicationController
 
     respond_to do |format|
       if @name_concert.update_attributes(params[:name_concert])
-        format.html { redirect_to @name_concert, notice: 'Name concert was successfully updated.' }
+        format.html { redirect_to @name_concert, notice: 'Nombre del concierto actualizado.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { render action: "editar" }
         format.json { render json: @name_concert.errors, status: :unprocessable_entity }
       end
     end
