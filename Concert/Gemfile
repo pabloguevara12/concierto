@@ -8,12 +8,9 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'simple_form'
 
-<<<<<<< HEAD
-=======
 gem 'sorcery'
 gem "custom_error_message", "~> 1.1.1"
 
->>>>>>> 141431b5f922ce771b6eadb7e633ad571ca5f874
 gem 'omniauth'
 
 gem 'omniauth-twitter'
