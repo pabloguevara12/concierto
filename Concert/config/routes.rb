@@ -33,7 +33,6 @@ root :to => "usuarios#index"
 
 
   resources :users
-
   resources :usuario_sessions
   
   match 'login' => 'usuario_sessions#new', as: :login
