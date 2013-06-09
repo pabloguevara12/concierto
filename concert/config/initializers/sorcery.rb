@@ -2,7 +2,10 @@
 # The default is nothing which will include only core features (password encryption, login/logout).
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging, :external
-Rails.application.config.sorcery.submodules = []
+
+Rails.application.config.sorcery.submodules = [:remember_me]
+Rails.application.config.sorcery.submodules = [:session_timeout]
+Rails.application.config.sorcery.submodules = [:external]
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
@@ -18,7 +21,7 @@ Rails.application.config.sorcery.configure do |config|
   # the URL he wanted to reach, and send him there after login, using 'redirect_back_or_to'.
   # Default: `true`
   #
-  # config.save_return_to_url =
+   config.save_return_to_url = true
 
 
   # Set domain option for cookies; Useful for remember_me submodule.
@@ -31,18 +34,18 @@ Rails.application.config.sorcery.configure do |config|
   # allow the remember_me cookie to settable through AJAX
   # Default: `true`
   #
-  # user.remember_me_httponly =
+  #usuario.remember_me_httponly = 'true'
   
   # How long in seconds the session length will be
   # Default: `604800`
   #
-  # user.remember_me_for =
+ #usuario.remember_me_for = '604800'
 
   # -- session timeout --
   # How long in seconds to keep the session alive.
   # Default: `3600`
   #
-  # config.session_timeout =
+  # config.session_timeout = '3600'
 
 
   # Use the last action as the beginning of session timeout.
@@ -81,7 +84,7 @@ Rails.application.config.sorcery.configure do |config|
   # What providers are supported by this app, i.e. [:twitter, :facebook, :github, :google, :liveid] .
   # Default: `[]`
   #
-  # config.external_providers =
+  config.external_providers = [:twitter]
 
 
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
@@ -105,10 +108,10 @@ Rails.application.config.sorcery.configure do |config|
   # Twitter wil not accept any requests nor redirect uri containing localhost,
   # make sure you use 0.0.0.0:3000 to access your app in development
   #
-  # config.twitter.key = ""
-  # config.twitter.secret = ""
-  # config.twitter.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=twitter"
-  # config.twitter.user_info_mapping = {:email => "screen_name"}
+   config.twitter.key = "zJyJ8LhtLzFDQar1yJQ"
+   config.twitter.secret = "57Y6LA9uuMKWZ6QZSguYAeiM5HADhj6guSC4S2Lsaw"
+   config.twitter.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=twitter"
+   config.twitter.user_info_mapping = {:email => "screen_name"}
   #
   # config.facebook.key = ""
   # config.facebook.secret = ""
@@ -142,12 +145,12 @@ Rails.application.config.sorcery.configure do |config|
 
 
   # --- user config ---
-  config.user_config do |user|
+  config.user_config do |usuario|
     # -- core --
     # specify username attributes, for example: [:username, :email].
     # Default: `[:username]`
     #
-    # user.username_attribute_names =
+    usuario.username_attribute_names = [:email]
 
 
     # change *virtual* password attribute, the one which is used until an encrypted one is generated.

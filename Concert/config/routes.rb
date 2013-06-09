@@ -12,10 +12,16 @@ Concert::Application.routes.draw do
 root :to => "usuarios#index"
   get "welcome/index"
 
-  root :to => "articles#index"  
+  
     
   match "/auth/:provider/callback" => "sessions#create"  
        
+
+get "logout" => "usuario_sessions#destroy", :as => "logout"
+get "login" => "usuario_sessions#new", :as => "login"
+get "signup" => "usuarios#new", :as => "signup"
+
+  resources :sessions
 
   resources :usuarios
 

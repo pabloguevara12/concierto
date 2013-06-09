@@ -1,4 +1,6 @@
 class UsuarioSessionsController < ApplicationController
+
+	
 	def new
 		@usuario = Usuario.new
 	end
