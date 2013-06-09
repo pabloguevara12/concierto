@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130609013533) do
+ActiveRecord::Schema.define(:version => 20130609064036) do
 
   create_table "bands", :force => true do |t|
     t.integer  "band_id"
@@ -62,6 +62,9 @@ ActiveRecord::Schema.define(:version => 20130609013533) do
     t.string   "phone"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.boolean  "gmaps"
+    t.float    "longitude"
+    t.float    "latitude"
   end
 
   create_table "type_users", :force => true do |t|
