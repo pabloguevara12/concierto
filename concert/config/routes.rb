@@ -1,5 +1,13 @@
 Concert::Application.routes.draw do
 
+  resources :user_bands
+
+  resources :bands do
+    member do
+      get "add_user"
+    end
+  end  
+
   root :to => "usuarios#index"
 
 

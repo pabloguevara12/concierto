@@ -15,6 +15,24 @@
   <%= @band.style %>
 </p>
 
+<table>
+  <tr>
+  	<td colspan="2">
+      Usuarios de la banda
+  	</td>
+  </tr>
+  <% @band.users.each do |user| %>
+  <tr>
+  	<td>&nbsp;</td>
+  	<td>
+      <%= user.name %>
+  	</td>
+  </tr>
+<% end %>
 
+</table>
+
+
+<%= link_to 'Add_user', add_user_band_path(@band) %> |
 <%= link_to 'Edit', edit_band_path(@band) %> |
 <%= link_to 'Back', bands_path %>
