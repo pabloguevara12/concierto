@@ -20,6 +20,9 @@ validates :amaterno, :presence => true
 validates_confirmation_of :email
 validate :check_password
 
+has_many :band_usuarios
+has_many :bands, :through => :band_usuarios
+
 #validates :password, :presence => {:message => " No puede estar en blanco"},:confirmation => {:message => " No coinciden"}
 #validates :email, :presence => {:message => " no puede estar en blanco"},:confirmation => {:message => "No coinciden"},:uniqueness => {:message => "Usuario ya existe"}
 

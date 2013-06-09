@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130609064036) do
+ActiveRecord::Schema.define(:version => 20130609163944) do
+
+  create_table "band_usuarios", :force => true do |t|
+    t.integer  "band_id"
+    t.integer  "usuario_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "bands", :force => true do |t|
     t.integer  "band_id"
@@ -76,13 +83,6 @@ ActiveRecord::Schema.define(:version => 20130609064036) do
     t.integer  "tur_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-  end
-
-  create_table "user_bands", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "band_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "user_roles", :force => true do |t|

@@ -1,0 +1,2 @@
+class BandUsuariosController < ApplicationController
+end
