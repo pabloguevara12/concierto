@@ -4,6 +4,8 @@ Concert::Application.routes.draw do
 
   get "welcome/index"
 
+
+
   root :to => "articles#index"  
     
   match "/auth/:provider/callback" => "sessions#create"  
@@ -19,6 +21,12 @@ Concert::Application.routes.draw do
 
 
   resources :users
+
+  resources :bands
+
+  resources :sites
+
+  resources :name_concerts
 
   resources :usuario_sessions
   match 'login' => 'usuario_sessions#new', as: :login

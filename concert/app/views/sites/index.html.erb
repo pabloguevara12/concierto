@@ -11,6 +11,8 @@
     <th></th>
     <th></th>
   </tr>
+    
+
 
 <% @sites.each do |site| %>
   <tr>
@@ -30,3 +32,6 @@
 <br />
 
 <%= link_to 'New Site', new_site_path %>
+
+
+<%= gmaps4rails(@json) %>
