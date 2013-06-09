@@ -85,6 +85,13 @@ ActiveRecord::Schema.define(:version => 20130609171051) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "user_bands", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "band_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "user_roles", :force => true do |t|
     t.integer  "tur_id"
     t.integer  "rol_id"
