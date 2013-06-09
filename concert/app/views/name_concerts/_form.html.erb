@@ -13,23 +13,23 @@
 
   
   <div class="field">
-    <%= f.label :place %><br />
+    <%= f.label :Lugar %><br />
     <%= f.text_field :place %>
   </div>
   <div class="field">
-    <%= f.label :band %><br />
-    <%= f.text_field :band %>
+    <%= f.label :bandas %><br />
+    <%= f.collection_select :band, Band.all, :id, :name, :prompt => true %>
   </div>
   <div class="field">
-    <%= f.label :person %><br />
-    <%= f.text_field :person %>
+    <%= f.label :persona %><br />
+   <%= f.collection_select :id, Usuario.all, :id, :username, :prompt => true %>
   </div>
   <div class="field">
-    <%= f.label :start_date %><br />
+    <%= f.label :Inicio %><br />
     <%= f.datetime_select :start_date %>
   </div>
   <div class="field">
-    <%= f.label :final_date %><br />
+    <%= f.label :Final %><br />
     <%= f.datetime_select :final_date %>
   </div>
   <div class="actions">

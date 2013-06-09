@@ -9,7 +9,7 @@ Concert::Application.routes.draw do
 
   resources :viewers
 
-
+root :to => "usuarios#index"
   get "welcome/index"
 
   root :to => "articles#index"  
