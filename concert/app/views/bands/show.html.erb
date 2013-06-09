@@ -18,15 +18,13 @@
 <table>
   <tr>
   	<td colspan="2">
-      Usuarios de la banda
+      <b>Usuarios de la banda:</b>
   	</td>
   </tr>
   <% @band.usuarios.each do |usuario| %>
   <tr>
-  	<td>&nbsp;</td>
-  	<td>
-      <%= usuario.name %>
-  	</td>
+  	<td width="5px;">-&nbsp;</td>
+  	<td><%= usuario.name %></td>
   </tr>
   <% end %>
 
