@@ -39,7 +39,6 @@ get "signup" => "usuarios#new", :as => "signup"
 
 
   resources :users
-
   resources :usuario_sessions
   
   match 'login' => 'usuario_sessions#new', as: :login
