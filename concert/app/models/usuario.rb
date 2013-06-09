@@ -13,7 +13,6 @@ authenticates_with_sorcery!
 
 	has_one :utype
 
-validates_length_of :username, :minimum => 5, :allow_nil => true, :allow_blank => true
 validates :name, :presence => {:message => " no puede estar en blanco"}
 validates :apaterno, :presence => true
 validates :amaterno, :presence => true
