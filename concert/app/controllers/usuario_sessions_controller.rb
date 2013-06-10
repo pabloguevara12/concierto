@@ -11,7 +11,8 @@ class UsuarioSessionsController < ApplicationController
 		else
 			flash.now[:alert] = "Su usuario y/o contrasena son incorrectos"
 			render actions: :new
-			redirect_to usuarios_path 
+			redirect_to :usuarios_path 
+			
 		end
 	end
 	def destroy

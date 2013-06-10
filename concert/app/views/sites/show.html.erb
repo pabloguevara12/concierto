@@ -25,7 +25,7 @@
   <b>Phone:</b>
   <%= @site.phone %>
 </p>
-
+<%= gmaps4rails(@json) %>
 
 <%= link_to 'Edit', edit_site_path(@site) %> |
 <%= link_to 'Back', sites_path %>

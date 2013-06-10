@@ -6,7 +6,7 @@ class SitesController < ApplicationController
 
   def index
     @sites = Site.all
-    @json = Site.all.to_gmaps4rails
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @sites }
@@ -17,7 +17,7 @@ class SitesController < ApplicationController
   # GET /sites/1.json
   def show
     @site = Site.find(params[:id])
-
+    @json = Site.all.to_gmaps4rails
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @site }
