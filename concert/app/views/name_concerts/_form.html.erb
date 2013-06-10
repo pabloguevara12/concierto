@@ -22,7 +22,7 @@
   </div>
   <div class="field">
     <%= f.label :persona %><br />
-   <%= f.collection_select :id, Usuario.all, :id, :username, :prompt => true %>
+   <%= f.collection_select :id, Usuario.all, :id, :name, :prompt => true %>
   </div>
   <div class="field">
     <%= f.label :Inicio %><br />
