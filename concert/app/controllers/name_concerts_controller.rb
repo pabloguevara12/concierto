@@ -23,6 +23,8 @@ class NameConcertsController < ApplicationController
 
   # GET /name_concerts/new
   # GET /name_concerts/new.json
+  
+
   def new
     @name_concert = NameConcert.new
 

@@ -5,6 +5,7 @@ authenticates_with_sorcery!
    :email_confirmation, :utype_id, :gender, :dtype_id, :num_identity
 
 	has_one :utype
+    has_and_belongs_to_many :band
 
 validates :name, :presence => {:message => " no puede estar en blanco"}
 validates :apaterno, :presence => true

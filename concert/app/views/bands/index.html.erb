@@ -12,10 +12,10 @@
   </tr>
 
 <% @bands.each do |band| %>
+
   <tr>
-    <td><%= band.band_id %></td>
     <td><%= band.name %></td>
-    <td><%= band.member %></td>
+    <td><%= band.usuario.name %></td>
     <td><%= band.style %></td>
     <td><%= link_to 'Show', band %></td>
     <td><%= link_to 'Edit', edit_band_path(band) %></td>
@@ -26,4 +26,4 @@
 
 <br />
 
-<%= link_to 'New Band', new_band_path %>
+<%= link_to 'Nueva Banda', new_band_path %>
