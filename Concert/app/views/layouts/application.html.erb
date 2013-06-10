@@ -1,66 +1,94 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Social RED</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <%= stylesheet_link_tag 'gmaps4rails' %>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
 
-  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+
+
+<title>Free Website Templates</title>
+<link rel="stylesheet" href="/style.css" type="text/css" media="screen" />
 </head>
 <body>
-  <div id="user_nav">  
-  <%= link_to "Sign in con Twitter", "/auth/twitter" %>  
-</div> 
+<div id="container">
+	<!-- Page Title -->
+	<div id="page_title">
+		<h1><span>The Music Website</span></h1>
+	</div>
+	<!-- / Page Title -->
+	<div id="header_image"><span>&nbsp;</span></div>
+	<!-- Page Header -->
+	<div id="header_container_left">
+		<div id="header_container_right">
+			<div id="header_container">
+				<div id="page_header">
+					<div id="header_hidden">&nbsp;</div>
+					<!-- Header Punchline -->
+					<div id="header_punchline">
+						<h3><span>Your Punchline Goes Here</span></h3>
+					</div>
+					<div id="user_nav">
+					  <%= link_to "Sign in con Twitter", "/auth/twitter" %>
+					</div>
+					<!-- / Header Punchline -->
+					<!-- / Header Punchline -->
+					<!-- Header Navigation Menu -->
+					<div id="header_menu">
+						<ul>
+							<li id="menu_5"><a href="/bands"><b>Bandas</b></a></li>
+							<li id="menu_5"><a href="/name_concerts"><b>Conciertos</b></a></li>
+							<li id="menu_5"><a href="/viewers"><b>Asistentes</b></a></li>
+<!--
+	usuarios
+	roles
 
-<div id="main">
-    <header>
-      <div id="logo"><h1>UPC<a href="#">conciertos</a></h1></div>
-      <nav>
-        <ul class="lavaLampWithImage" id="lava_menu">
-          <li class="current"><a href="index.html">home</a></li>
-          <li><a href="about.html">about us</a></li>
-          <li><a href="portfolio.html">our portfolio</a></li>
-          <li><a href="blog.html">blog</a></li>
-          <li><a href="contact.php">contact</a></li>
-        </ul>
-      </nav>
-    </header>
-      <div id="site_content">
-      <div id="sidebar_container">
-        <div class="gallery">
-          <ul class="images">
-            <li class="show"><img width="450" height="450" src="/assets/1.jpg" alt="photo_one" /></li>
-            <li><img width="450" height="450" src="/assets/2.jpg" alt="photo_two" /></li>
-          </ul>
-        </div>
-      </div>
-      <div id="content">
-<%= yield %>
+	dtypes
+	utypes
+
+--band_usuarios
+--sessions
+	bands
+	name_concerts
+	sites
+	viewers
+--users
+-->
+						</ul>
+					</div>
+					<!-- / Page Header : Menu -->
+					<!-- Header Links -->
+					<div id="header_links">
+						<ul>
+							<li><a href="/usuarios"><b>Usuarios</b></a></li>
+							<li><a href="/roles"><b>Roles</b></a></li>
+							<li><a href="/dtypes"><b>Tipo de documentos</b></a></li>
+							<li><a href="/utypes"><b>Tipo de usuarios</b></a></li>
+							<li><a href="/sites"><b>Locales</b></a></li>
+						</ul>
+					</div><div class="clearthis"></div>
+					<!-- / Header Links -->
+				</div>
+			</div><div class="inner_copy"></div>
+		</div>
+	</div>
+	<!-- / Page Header -->
+	<!-- Main Content -->
+	<div id="maincontent_container">
+		<div id="maincontent">
+			<div id="musicshop">
+				<%= yield %>
+			</div>
+			<!-- / My Music Shop -->
+		</div>
+	</div>
+	<!-- / Main Content -->
+	<!-- Page Footer -->
+	<div id="page_footer">
+		<div class="fleft"><p>Copyright statement.</p></div>
+		<div class="fright"><p>Great collection of free templates <a href="http://www.websitetemplatesonline.com" target="_blank">here</a>. | <a href="http://www.getjoomlatemplatesfree.com/" title="Joomla!">www.GetJoomlaTemplatesFree.com</a>. Templates best for Joomla. </p></div><div class="fclear"></div>
+	</div>
+	<!-- / Page Footer -->
 </div>
-    </div>
-      <footer>
-      <p><a href="index.html">home</a> | <a href="about.html">about us</a> | <a href="portfolio.html">our portfolio</a> | <a href="blog.html">blog</a> | <a href="contact.php">contact</a></p>
-      <p>&copy; 2013 CONCIERTOS| Images by <a href="http://www.fotogrph.com">Fotogrph</a> | <a href="http://www.heartinternet.co.uk/vps/">Virtual server</a> | <a href="http://www.css3templates.co.uk">design from css3templates.co.uk</a></p>
-    </footer>
-  </div>
-
-
-  <!-- javascript at the bottom for fast page loading -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery.easing.min.js"></script>
-  <script type="text/javascript" src="js/jquery.lavalamp.min.js"></script>
-  <script type="text/javascript" src="js/image_fade.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      $("#lava_menu").lavaLamp({
-        fx: "backout",
-        speed: 700
-      });
-    });
-  </script>
-
 <%= yield :scripts %>
 
 </body>
