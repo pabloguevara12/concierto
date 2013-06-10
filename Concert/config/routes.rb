@@ -7,19 +7,24 @@ Concert::Application.routes.draw do
     end
   end  
 
-  resources :viewers
+  
 
 root :to => "usuarios#index"
   get "welcome/index"
 
+  resources :usuario_sessions
   
+  match 'login' => 'usuario_sessions#new', as: :login
+  match 'logout' => 'usuario_sessions#destroy', as: :logout
     
   match "/auth/:provider/callback" => "sessions#create"  
-       
 
-get "logout" => "usuario_sessions#destroy", :as => "logout"
-get "login" => "usuario_sessions#new", :as => "login"
-get "signup" => "usuarios#new", :as => "signup"
+
+#get "logout" => "usuario_sessions#destroy", :as => "logout"
+#get "login" => "usuario_sessions#new", :as => "login"
+#get "signup" => "usuarios#new", :as => "signup"
+
+
 
   resources :sessions
 
@@ -31,6 +36,7 @@ get "signup" => "usuarios#new", :as => "signup"
 
   resources :sites
 
+  resources :viewers
 
   resources :dtypes
 
@@ -39,10 +45,7 @@ get "signup" => "usuarios#new", :as => "signup"
 
 
   resources :users
-  resources :usuario_sessions
   
-  match 'login' => 'usuario_sessions#new', as: :login
-  match 'logout' => 'usuario_sessions#destroy', as: :logout
 
 
   # The priority is based upon order of creation:
