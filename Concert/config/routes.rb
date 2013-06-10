@@ -46,6 +46,7 @@ root :to => "usuarios#index"
 
   resources :users
   
+  resources :roles
 
 
   # The priority is based upon order of creation:
