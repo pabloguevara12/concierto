@@ -15,16 +15,25 @@
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
+
+
   </div>
   <div class="field">
     <%= f.label :member %><br />
-    <%= f.text_field :member %>
-  </div>
+    <%= f.collection_select :band_id, Usuario.all, :id, :name, :prompt => true %>
+
+    </div>
   
+
   <div class="field">
-    <%= f.label :style %><br />
-    <%= f.text_field :style %>
-  </div>
+    <% nombres = {'Rock' => 'Rock', 'Salsa' => 'Salsa', 'Pop' => 'Pop', 'Merengue' => 'Merengue', 'Cumbia' => 'Cumbia', 'Reggeton' => 'Reggeton', 'Disco' => 'Disco'} %>
+        <% lista = nombres.sort %>
+        <%= f.label :Genero %>
+        <%= f.select :style, lista %>
+
+
+     </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -18,11 +18,12 @@
   </div>
   <div class="field">
     <%= f.label :bandas %><br />
-    <%= f.collection_select :band, Band.all, :id, :name, :prompt => true %>
-  </div>
+    <%= f.text_field :band %>
+
+
   <div class="field">
     <%= f.label :persona %><br />
-   <%= f.collection_select :id, Usuario.all, :id, :name, :prompt => true %>
+    <%= f.text_field :person %>
   </div>
   <div class="field">
     <%= f.label :Inicio %><br />
