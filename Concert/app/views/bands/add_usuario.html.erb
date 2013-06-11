@@ -2,7 +2,13 @@
 
 <%= simple_form_for(@band) do |f| %>
  
+
+
     <%= f.association :usuarios, :as => "check_boxes" %>
+
+
     <%= f.button :submit %>
+  
+
   
 <% end %>
