@@ -1,13 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
-<meta http-equiv="Content-Style-Type" content="text/css" />
+	<!--meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" /-->
+	<!--meta http-equiv="Content-Style-Type" content="text/css" /-->
+
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+	<%= stylesheet_link_tag 'gmaps4rails' %>
+
+	<%= yield :scripts %>
 
 
-
-<title>Free Website Templates</title>
-<link rel="stylesheet" href="/style.css" type="text/css" media="screen" />
+	<title>Free Website Templates</title>
+	<link rel="stylesheet" href="/style.css" type="text/css" media="screen" />
 </head>
 <body>
 <div id="container">
@@ -38,21 +44,6 @@
 							<li id="menu_5"><a href="/bands"><b>Bandas</b></a></li>
 							<li id="menu_5"><a href="/name_concerts"><b>Conciertos</b></a></li>
 							<li id="menu_5"><a href="/viewers"><b>Asistentes</b></a></li>
-<!--
-	usuarios
-	roles
-
-	dtypes
-	utypes
-
---band_usuarios
---sessions
-	bands
-	name_concerts
-	sites
-	viewers
---users
--->
 						</ul>
 					</div>
 					<!-- / Page Header : Menu -->
@@ -89,7 +80,6 @@
 	</div>
 	<!-- / Page Footer -->
 </div>
-<%= yield :scripts %>
 
 </body>
 </html>
