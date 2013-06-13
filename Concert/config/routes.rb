@@ -43,7 +43,7 @@ root :to => "usuarios#index"
 
   resources :utypes
 
-
+ resources :districts
   resources :users
   
   resources :roles

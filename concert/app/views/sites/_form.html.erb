@@ -22,11 +22,16 @@
     <%= f.text_field :address %>
   </div>
 
+    
   <div class="field">
+    <% nombres = {'Ate' => 'Ate', 'Ancon' => 'Ancon', 'Barranco' => 'Barranco', 'Breña' => 'Breña', 'Carabayllo' => 'Carabayllo', 'Cercado de Lima' => 'Cercado de Lima', 'Chorrillos' => 'Chorrillos' , 'Cieneguilla' => 'Cieneguilla' , 'Comas' => 'Comas' , 'el Agustino' => 'el Agustino' , 'Independencia' => 'Independencia' , 'la Molina' => 'la Molina' , 'la Victoria' => 'La Victoria' , 'rimac' => 'rimac', 'San Borja' => 'san Borja', 'san Luis' => 'san Luis', 'santa Anita' => 'Santa Anita', 
+} %>
+        <% lista = nombres.sort %>
+        <%= f.label :Distrito  %>
+        <%= f.select :district, lista %>
 
-    <%= f.label :district %><br />
-    <%= f.text_field :district %>
-  </div>
+
+     </div>
 
   <div class="field">
     <%= f.label :phone %><br />
