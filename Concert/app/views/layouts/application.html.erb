@@ -170,6 +170,23 @@
 </thead>
 	<tr>
 		<td align="center">
+
+
+			<table class="pollstableborder" cellspacing="0" cellpadding="0" border="0">
+				<% @bands.each do |band| %>
+				<tr>
+					<td class="sectiontableentry2" valign="top">
+						<input type="radio" name="voteid" id="voteid1" value="1" alt="1" />
+					</td>
+					<td class="sectiontableentry2" valign="top">
+						<label for="voteid1">&nbsp;&nbsp;<%= band.name %></label>
+					</td>
+				</tr>
+				<% end %>
+			</table>
+
+
+			<!--
 			<table class="pollstableborder" cellspacing="0" cellpadding="0" border="0">
 							<tr>
 					<td class="sectiontableentry2" valign="top">
@@ -234,7 +251,8 @@
 									Cold Play				</label>
 					</td>
 				</tr>
-										</table>
+			</table>
+			-->
 		</td>
 	</tr>
 	<tr>
