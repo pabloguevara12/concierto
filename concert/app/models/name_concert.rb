@@ -3,4 +3,5 @@ class NameConcert < ActiveRecord::Base
   belongs_to :site
   belongs_to :band
   belongs_to :usuario
+  has_many :goconcerts
 end

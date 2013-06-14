@@ -2,16 +2,16 @@ class UsuarioSessionsController < ApplicationController
 
 	
 	def new
-		@usuario = Usuario.new
+		@usuario =  Usuario.new
 	end
 
 	def create
-		if @usuario = login(params[:email], params[:password], params[:remember_me])
-			redirect_back_or_to(usuarios_path, message: "Login Exitoso")
+		if @usuario = login(params[:email],params[:password], params[:remember_me])
+			redirect_back_or_to(bands_path, :notice => "Login Exitoso")
 		else
 			flash.now[:alert] = "Su usuario y/o contrasena son incorrectos"
 			render action: :new
-			#redirect_to :usuarios_path 
+		 
 			
 		end
 	end
