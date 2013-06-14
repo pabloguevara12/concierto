@@ -1,0 +1,46 @@
+
+<%= form_for(@name_concert) do |f| %>
+  <% if @name_concert.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@name_concert.errors.count, "error") %> prohibited this name_concert from being saved:</h2>
+
+      <ul>
+      <% @name_concert.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Nombre %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :Fecha_de_inicio %><br />
+    <%= f.datetime_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :Fecha_de_fin %><br />
+    <%= f.datetime_select :end_date %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :Local %><br />
+    <%= f.collection_select :site_id, Site.all, :id, :name, :prompt => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Banda %><br />
+    <%= f.collection_select :band_id, Band.all, :id, :name, :prompt => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Usuario %><br />
+    <%= f.collection_select :usuario_id, Usuario.all, :id, :name, :prompt => true %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit :Grabar %>
+  </div>
+<% end %>

@@ -31,7 +31,11 @@ root :to => "usuarios#index"
 
   resources :sessions
 
+  resources :searchs_session
+
   resources :usuarios
+
+  resources :searchs
 
   resources :bands
 

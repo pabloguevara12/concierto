@@ -96,28 +96,31 @@
 		<br/>
 		<div id="user_nav">
 		  <%= link_to "Sign in con Twitter", "/auth/twitter" %>
+		  <img src="/images/twitter.jpg" alt="Smiley face" height="42" width="42"> 
 		</div>
 
-<!--
+
+
 			<div class="module">
 			<div>
 				<div>
 					<div>
 						<h3>Ingreso</h3>
-						<form action="/joomla/15/41/index.php" method="post" name="login" id="form-login" >
+						<form action="login" method="post" name="login" id="form-login" >
 
 		<fieldset class="input">
-			<p id="form-login-username">
-				<label for="modlgn_username">Usuario</label><br />
-				<input id="modlgn_username" type="text" name="username" class="inputbox" alt="username" size="18" />
+			<p id="form-login-email">
+				<label for="email">Email</label> 
+				<input id="email" name="email" type="text" />  
 			</p>
 			<p id="form-login-password">
-				<label for="modlgn_passwd">Contraseña</label><br />
-				<input id="modlgn_passwd" type="password" name="passwd" class="inputbox" size="18" alt="password" />
+				<label for="password">Password</label> 
+				<input id="password" name="password" type="password" /> 
+				
 			</p>
 			<p id="form-login-remember">
 				<label for="modlgn_remember">Recordandome</label>
-				<input id="modlgn_remember" type="checkbox" name="remember" class="inputbox" value="yes" alt="Recordarme" />
+				<input id="modlgn_remember" type="checkbox" name="remember" 
 			</p>
 			<input type="submit" name="Submit" class="button" value="Login" />
 		</fieldset>
@@ -142,7 +145,7 @@
 			</div>
 		</div>
 
-	-->
+	
 	
 	</div>
     <div id="maincolumn">
