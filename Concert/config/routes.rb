@@ -14,7 +14,7 @@ Concert::Application.routes.draw do
   end  
 
 
-root :to => "usuarios#index"
+root :to => "sites#index"
   get "welcome/index"
 
   resources :usuario_sessions
