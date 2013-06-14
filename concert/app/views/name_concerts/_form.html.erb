@@ -16,17 +16,29 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :site %><br />
-    <%= f.text_field :site %>
+    <%= f.label :start_date %><br />
+    <%= f.datetime_select :start_date %>
   </div>
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%= f.datetime_select :end_date %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :site %><br />
+    <%= f.collection_select :site_id, Site.all, :id, :name, :prompt => true %>
+  </div>
+
   <div class="field">
     <%= f.label :band %><br />
-    <%= f.text_field :band %>
+    <%= f.collection_select :band_id, Band.all, :id, :name, :prompt => true %>
   </div>
+
   <div class="field">
     <%= f.label :usuario %><br />
-    <%= f.text_field :usuario %>
+    <%= f.collection_select :usuario_id, Usuario.all, :id, :name, :prompt => true %>
   </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -6,18 +6,28 @@
 </p>
 
 <p>
+  <b>Start date:</b>
+  <%= @name_concert.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @name_concert.end_date %>
+</p>
+
+<p>
   <b>Site:</b>
-  <%= @name_concert.site %>
+  <%= @name_concert.site.name %>
 </p>
 
 <p>
   <b>Band:</b>
-  <%= @name_concert.band %>
+  <%= @name_concert.band.name %>
 </p>
 
 <p>
   <b>Usuario:</b>
-  <%= @name_concert.usuario %>
+  <%= @name_concert.usuario.name %>
 </p>
 
 
