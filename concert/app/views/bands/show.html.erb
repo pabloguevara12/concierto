@@ -1,36 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b>Nombre:</b>
   <%= @band.name %>
 </p>
-
+<!--
 <p>
   <b>Member:</b>
   <%= @band.usuario.name %>
 </p>
-
+-->
 <p>
-  <b>Style:</b>
+  <b>Genero:</b>
   <%= @band.style %>
 </p>
 
-<table>
-  <tr>
-  	<td colspan="2">
-      <b>Usuarios de la banda:</b>
-  	</td>
-  </tr>
-  <% @band.usuarios.each do |usuario| %>
-  <tr>
-  	<td width="5px;">-&nbsp;</td>
-  	<td><%= usuario.name %></td>
-  </tr>
-  <% end %>
-
-</table>
+<p>
+  <b>Miembros de la banda:</b><br/>
+    <% @band.usuarios.each do |usuario| %>
+      -&nbsp;<%= usuario.name %><br/>
+    <% end %>
+</p>
 
 
-<%= link_to 'Add_usuario', add_usuario_band_path(@band) %> |
+<%= link_to 'Agregar Miembro', add_usuario_band_path(@band) %> |
 <%= link_to 'Editar', edit_band_path(@band) %> |
 <%= link_to 'Volver', bands_path %>
