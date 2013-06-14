@@ -3,7 +3,7 @@ class Usuario < ActiveRecord::Base
 authenticates_with_sorcery!
  attr_accessible :password, :password_confirmation, :crypted_password, :email, :salt, :name, :apaterno, :amaterno,
    :email_confirmation, :utype_id, :gender, :dtype_id, :num_identity
-
+  has_many :goconcerts
 	has_one :utype
     has_and_belongs_to_many :band
 

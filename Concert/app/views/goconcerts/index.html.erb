@@ -13,8 +13,8 @@
 <% @goconcerts.each do |goconcert| %>
   <tr>
     <td><%= goconcert.data %></td>
-    <td><%= goconcert.usuario %></td>
-    <td><%= goconcert.name_concert %></td>
+    <td><%= goconcert.usuario.name %></td>
+    <td><%= goconcert.name_concert.name %></td>
     <td><%= link_to 'Volver', goconcert %></td>
     <td><%= link_to 'Editar', edit_goconcert_path(goconcert) %></td>
     <td><%= link_to 'Destroy', goconcert, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>

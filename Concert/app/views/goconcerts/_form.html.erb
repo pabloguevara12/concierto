@@ -17,13 +17,16 @@
   </div>
   <div class="field">
     <%= f.label :usuario %><br />
-    <%= f.text_field :usuario %>
+    <%= f.collection_select :usuario_id, Usuario.all, :id, :name, :prompt => true %>
+    
   </div>
   <div class="field">
     <%= f.label :name_concert %><br />
-    <%= f.text_field :name_concert %>
+     <%= f.collection_select :name_concert_id, NameConcert.all, :id, :name, :prompt => true %>
+  
+   
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :Asistir %>
   </div>
 <% end %>

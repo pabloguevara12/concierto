@@ -2,6 +2,8 @@ class CreateNameConcerts < ActiveRecord::Migration
   def change
     create_table :name_concerts do |t|
       t.string :name
+      t.datetime :start_date
+      t.datetime :end_date
       t.references :site
       t.references :band
       t.references :usuario
