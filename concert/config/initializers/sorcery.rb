@@ -3,9 +3,8 @@
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging, :external
 
-Rails.application.config.sorcery.submodules = [:remember_me]
-Rails.application.config.sorcery.submodules = [:session_timeout]
-Rails.application.config.sorcery.submodules = [:external]
+Rails.application.config.sorcery.submodules = [:external, :session_timeout]
+
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
@@ -39,7 +38,7 @@ Rails.application.config.sorcery.configure do |config|
   # How long in seconds the session length will be
   # Default: `604800`
   #
- #usuario.remember_me_for = '604800'
+ # usuario.remember_me_for = '604800'
 
   # -- session timeout --
   # How long in seconds to keep the session alive.
@@ -281,7 +280,7 @@ Rails.application.config.sorcery.configure do |config|
     # reset password code attribute name.
     # Default: `:reset_password_token`
     #
-    # user.reset_password_token_attribute_name =
+    # usuario.reset_password_token_attribute_name = :reset_password_token
 
 
     # expires at attribute name.
@@ -420,7 +419,7 @@ Rails.application.config.sorcery.configure do |config|
     # User's external unique identifier in authentications class.
     # Default: `:uid`
     #
-    # user.provider_uid_attribute_name =
+     usuario.provider_uid_attribute_name = 'uid'
   end
 
   # This line must come after the 'user config' block.

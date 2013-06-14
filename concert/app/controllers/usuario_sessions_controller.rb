@@ -10,8 +10,8 @@ class UsuarioSessionsController < ApplicationController
 			redirect_back_or_to(usuarios_path, message: "Login Exitoso")
 		else
 			flash.now[:alert] = "Su usuario y/o contrasena son incorrectos"
-			render actions: :new
-			redirect_to :usuarios_path 
+			render action: :new
+			#redirect_to :usuarios_path 
 			
 		end
 	end

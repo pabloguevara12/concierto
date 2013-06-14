@@ -17,7 +17,7 @@ root :to => "usuarios#index"
   match 'login' => 'usuario_sessions#new', as: :login
   match 'logout' => 'usuario_sessions#destroy', as: :logout
     
-  match "/auth/:provider/callback" => "sessions#create"  
+  match "/auth/:provider/callback" => "usuario_sessions#create"  
 
 
 #get "logout" => "usuario_sessions#destroy", :as => "logout"
