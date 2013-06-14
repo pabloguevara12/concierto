@@ -1,9 +1,9 @@
-<h1>Listing utypes</h1>
+<h1>Lista de tipos de usuario</h1>
 
 <table>
   <tr>
     <th>Id</th>
-    <th>Tdu</th>
+    <th>Descripci&oacute;n</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= utype.id %></td>
     <td><%= utype.tdu %></td>
-    <td><%= link_to 'Show', utype %></td>
-    <td><%= link_to 'Edit', edit_utype_path(utype) %></td>
-    <td><%= link_to 'Destroy', utype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Ver', utype %></td>
+    <td><%= link_to 'Editar', edit_utype_path(utype) %></td>
+    <td><%= link_to 'Eliminar', utype, method: :delete, data: { confirm: 'Estas seguro de eliminar?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Utype', new_utype_path %>
+<%= link_to 'Nuevo', new_utype_path %>

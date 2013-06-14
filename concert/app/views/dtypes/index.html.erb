@@ -1,9 +1,9 @@
-<h1>Listing dtypes</h1>
+<h1>Lista de tipos de documento</h1>
 
 <table>
   <tr>
     <th>Id</th>
-    <th>Tdd</th>
+    <th>Descripci&oacute;n</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= dtype.id %></td>
     <td><%= dtype.tdd %></td>
-    <td><%= link_to 'Show', dtype %></td>
-    <td><%= link_to 'Edit', edit_dtype_path(dtype) %></td>
-    <td><%= link_to 'Destroy', dtype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Ver', dtype %></td>
+    <td><%= link_to 'Editar', edit_dtype_path(dtype) %></td>
+    <td><%= link_to 'Eliminar', dtype, method: :delete, data: { confirm: 'Esta seguro de eliminar?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Dtype', new_dtype_path %>
+<%= link_to 'Nuevo', new_dtype_path %>
