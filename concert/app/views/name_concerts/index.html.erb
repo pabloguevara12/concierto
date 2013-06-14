@@ -1,12 +1,11 @@
-<h1>Lista de Conciertos</h1>
+<h1>Listing name_concerts</h1>
 
 <table>
   <tr>
-    <th>LUGAR</th>
-    <th>BANDA</th>
-    <th>USUARIO</th>
-    <th>INICIO</th>
-    <th>FINAL</th>
+    <th>Name</th>
+    <th>Site</th>
+    <th>Band</th>
+    <th>Usuario</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,19 +13,17 @@
 
 <% @name_concerts.each do |name_concert| %>
   <tr>
-    <td><%= name_concert.concert_id %></td>
-    <td><%= name_concert.place %></td>
+    <td><%= name_concert.name %></td>
+    <td><%= name_concert.site %></td>
     <td><%= name_concert.band %></td>
-    <td><%= name_concert.person %></td>
-    <td><%= name_concert.start_date %></td>
-    <td><%= name_concert.final_date %></td>
-    <td><%= link_to 'Mostrar', name_concert %></td>
-    <td><%= link_to 'Editar', edit_name_concert_path(name_concert) %></td>
-    <td><%= link_to 'Eliminar', name_concert, method: :delete, data: { confirm: 'Estas Seuro! Che?' } %></td>
+    <td><%= name_concert.usuario %></td>
+    <td><%= link_to 'Show', name_concert %></td>
+    <td><%= link_to 'Edit', edit_name_concert_path(name_concert) %></td>
+    <td><%= link_to 'Destroy', name_concert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'Nuevo concierto', new_name_concert_path %>
+<%= link_to 'New Name concert', new_name_concert_path %>

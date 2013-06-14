@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130610034958) do
+ActiveRecord::Schema.define(:version => 20130614035919) do
 
   create_table "band_usuarios", :force => true do |t|
     t.integer  "band_id"
@@ -42,16 +42,29 @@ ActiveRecord::Schema.define(:version => 20130610034958) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "goconcerts", :force => true do |t|
+    t.string   "data"
+    t.integer  "usuario_id"
+    t.integer  "name_concert_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "goconcerts", ["name_concert_id"], :name => "index_goconcerts_on_name_concert_id"
+  add_index "goconcerts", ["usuario_id"], :name => "index_goconcerts_on_usuario_id"
+
   create_table "name_concerts", :force => true do |t|
-    t.integer  "concert_id"
-    t.string   "place"
-    t.string   "band"
-    t.string   "person"
-    t.datetime "start_date"
-    t.datetime "final_date"
+    t.string   "name"
+    t.integer  "site_id"
+    t.integer  "band_id"
+    t.integer  "usuario_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "name_concerts", ["band_id"], :name => "index_name_concerts_on_band_id"
+  add_index "name_concerts", ["site_id"], :name => "index_name_concerts_on_site_id"
+  add_index "name_concerts", ["usuario_id"], :name => "index_name_concerts_on_usuario_id"
 
   create_table "roles", :force => true do |t|
     t.integer  "rol_id"
@@ -83,13 +96,6 @@ ActiveRecord::Schema.define(:version => 20130610034958) do
     t.integer  "tur_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-  end
-
-  create_table "user_roles", :force => true do |t|
-    t.integer  "tur_id"
-    t.integer  "rol_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

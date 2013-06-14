@@ -19,6 +19,8 @@ validates_uniqueness_of :num_identity
 has_many :band_usuarios
 has_many :bands, :through => :band_usuarios
 
+has_many :name_concerts
+
 #validates :password, :presence => {:message => " No puede estar en blanco"},:confirmation => {:message => " No coinciden"}
 #validates :email, :presence => {:message => " no puede estar en blanco"},:confirmation => {:message => "No coinciden"},:uniqueness => {:message => "Usuario ya existe"}
 
