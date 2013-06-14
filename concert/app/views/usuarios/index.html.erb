@@ -1,9 +1,9 @@
-<h1>Listing usuarios</h1>
+<h1>Lista de Usuarios</h1>
 
 <table>
   <tr>
     <th>Email</th>
-    <th>Crypted password</th>
+    <th>Password</th>
     <th>Salt</th>
     <th></th>
     <th></th>
@@ -15,13 +15,13 @@
     <td><%= usuario.email %></td>
   
    
-    <td><%= link_to 'Show', usuario %></td>
-    <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
-    <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Mostrar', usuario %></td>
+    <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
+    <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: '¿Estas Seguro?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Usuario', new_usuario_path %>
+<%= link_to 'Nuevo Usuario', new_usuario_path %>

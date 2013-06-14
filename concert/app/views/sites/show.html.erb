@@ -2,30 +2,30 @@
 
 
 <p>
-  <b>Name:</b>
+  <b>Nombre:</b>
   <%= @site.name %>
 </p>
 
 <p>
-  <b>Address:</b>
+  <b>Direccion:</b>
   <%= @site.address %>
 </p>
 
 <p>
-  <b>District:</b>
+  <b>Distritos:</b>
   <%= @site.district %>
 </p>
 
 <p>
-  <b>Map:</b>
+  <b>Mapas:</b>
   <%= @site.map %>
 </p>
 
 <p>
-  <b>Phone:</b>
+  <b>Telefono:</b>
   <%= @site.phone %>
 </p>
 <%= gmaps4rails(@json) %>
 
-<%= link_to 'Edit', edit_site_path(@site) %> |
-<%= link_to 'Back', sites_path %>
+<%= link_to 'Editar', edit_site_path(@site) %> |
+<%= link_to 'Volver', sites_path %>

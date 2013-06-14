@@ -1,4 +1,13 @@
 class NameConcertsController < ApplicationController
+  #def buscar
+  #  #@name_concerts = NameConcert.all
+  #  @name_concerts = NameConcert.find(:all, :conditions => ["name LIKE ?", "Mo%"])
+  #  respond_to do |format|
+  #    format.html # index.html.erb
+  #    format.json { render json: @name_concerts }
+  #  end
+  #end
+
   # GET /name_concerts
   # GET /name_concerts.json
   def index
