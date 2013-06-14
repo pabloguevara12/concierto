@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(:version => 20130614035919) do
 
   create_table "name_concerts", :force => true do |t|
     t.string   "name"
+    t.datetime "start_date"
+    t.datetime "end_date"
     t.integer  "site_id"
     t.integer  "band_id"
     t.integer  "usuario_id"
@@ -96,6 +98,13 @@ ActiveRecord::Schema.define(:version => 20130614035919) do
     t.integer  "tur_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "user_roles", :force => true do |t|
+    t.integer  "tur_id"
+    t.integer  "rol_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

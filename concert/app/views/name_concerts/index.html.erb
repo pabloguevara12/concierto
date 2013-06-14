@@ -1,10 +1,12 @@
-<h1>Listing name_concerts</h1>
+<h1>Listado de conciertos</h1>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Site</th>
-    <th>Band</th>
+    <th>Nombre</th>
+    <th>Fecha de inicio</th>
+    <th>Fecha de fin</th>
+    <th>Local</th>
+    <th>Banda</th>
     <th>Usuario</th>
     <th></th>
     <th></th>
@@ -14,16 +16,18 @@
 <% @name_concerts.each do |name_concert| %>
   <tr>
     <td><%= name_concert.name %></td>
-    <td><%= name_concert.site %></td>
-    <td><%= name_concert.band %></td>
-    <td><%= name_concert.usuario %></td>
-    <td><%= link_to 'Show', name_concert %></td>
-    <td><%= link_to 'Edit', edit_name_concert_path(name_concert) %></td>
-    <td><%= link_to 'Destroy', name_concert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= name_concert.start_date %></td>
+    <td><%= name_concert.end_date %></td>
+    <td><%= name_concert.site.name %></td>
+    <td><%= name_concert.band.name %></td>
+    <td><%= name_concert.usuario.name %></td>
+    <td><%= link_to 'Ver', name_concert %></td>
+    <td><%= link_to 'Editar', edit_name_concert_path(name_concert) %></td>
+    <td><%= link_to 'Eliminar', name_concert, method: :delete, data: { confirm: 'Eliminar concierto?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Name concert', new_name_concert_path %>
+<%= link_to 'Nuevo', new_name_concert_path %>

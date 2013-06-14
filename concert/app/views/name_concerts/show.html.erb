@@ -1,25 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b>Nombre:</b>
   <%= @name_concert.name %>
 </p>
 
 <p>
-  <b>Site:</b>
-  <%= @name_concert.site %>
+  <b>Fecha de inicio:</b>
+  <%= @name_concert.start_date %>
 </p>
 
 <p>
-  <b>Band:</b>
-  <%= @name_concert.band %>
+  <b>Fecha de fin:</b>
+  <%= @name_concert.end_date %>
+</p>
+
+<p>
+  <b>Local:</b>
+  <%= @name_concert.site.name %>
+</p>
+
+<p>
+  <b>Banda:</b>
+  <%= @name_concert.band.name %>
 </p>
 
 <p>
   <b>Usuario:</b>
-  <%= @name_concert.usuario %>
+  <%= @name_concert.usuario.name %>
 </p>
 
 
-<%= link_to 'Edit', edit_name_concert_path(@name_concert) %> |
-<%= link_to 'Back', name_concerts_path %>
+<%= link_to 'Editar', edit_name_concert_path(@name_concert) %> |
+<%= link_to 'Atras', name_concerts_path %>
