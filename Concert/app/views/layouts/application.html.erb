@@ -163,6 +163,7 @@
 
 <table width="95%" border="0" cellspacing="0" cellpadding="1" align="center" class="poll">
 <thead>
+
 	<tr>
 		<td style="font-weight: bold;">
 			A cual Eligirias?		</td>
@@ -172,7 +173,18 @@
 		<td align="center">
 
 
-			
+			<table class="pollstableborder" cellspacing="0" cellpadding="0" border="0">
+			<% session[:band_sesion].each do |band| %>
+			<tr>
+			  <td class="sectiontableentry2" valign="top">
+			    <input type="radio" name="voteid" id="voteid1" value="1" alt="1" />
+			  </td>
+			  <td class="sectiontableentry2" valign="top">
+			    <label for="voteid1">&nbsp;&nbsp;<%= band.name %></label>
+			  </td>
+			</tr>
+			<% end %>
+			</table> 
 
 
 			<!--

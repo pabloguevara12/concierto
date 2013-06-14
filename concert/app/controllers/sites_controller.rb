@@ -7,6 +7,7 @@ class SitesController < ApplicationController
   def index
     @sites = Site.all
     @bands = Band.all
+    session[:band_sesion] = @bands
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @sites }
