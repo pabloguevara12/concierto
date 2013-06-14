@@ -1,4 +1,7 @@
 Concert::Application.routes.draw do
+  resources :name_concerts
+
+
   resources :band_usuarios
 
   resources :bands do
@@ -7,7 +10,6 @@ Concert::Application.routes.draw do
     end
   end  
 
-  
 
 root :to => "usuarios#index"
   get "welcome/index"
@@ -15,16 +17,14 @@ root :to => "usuarios#index"
   resources :usuario_sessions
   
   match 'login' => 'usuario_sessions#new', as: :login
+
   match 'logout' => 'usuario_sessions#destroy', as: :logout
     
   match "/auth/:provider/callback" => "sessions#create"  
 
-
 #get "logout" => "usuario_sessions#destroy", :as => "logout"
 #get "login" => "usuario_sessions#new", :as => "login"
 #get "signup" => "usuarios#new", :as => "signup"
-
-
 
   resources :sessions
 
@@ -32,18 +32,16 @@ root :to => "usuarios#index"
 
   resources :bands
 
-  resources :name_concerts
-
   resources :sites
 
   resources :viewers
 
   resources :dtypes
 
-
   resources :utypes
 
- resources :districts
+  resources :districts
+
   resources :users
   
   resources :roles

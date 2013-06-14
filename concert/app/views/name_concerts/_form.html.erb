@@ -11,27 +11,21 @@
     </div>
   <% end %>
 
-  
   <div class="field">
-    <%= f.label :Lugar %><br />
-    <%= f.text_field :place %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :bandas %><br />
+    <%= f.label :site %><br />
+    <%= f.text_field :site %>
+  </div>
+  <div class="field">
+    <%= f.label :band %><br />
     <%= f.text_field :band %>
-
-
-  <div class="field">
-    <%= f.label :persona %><br />
-    <%= f.text_field :person %>
   </div>
   <div class="field">
-    <%= f.label :Inicio %><br />
-    <%= f.datetime_select :start_date %>
-  </div>
-  <div class="field">
-    <%= f.label :Final %><br />
-    <%= f.datetime_select :final_date %>
+    <%= f.label :usuario %><br />
+    <%= f.text_field :usuario %>
   </div>
   <div class="actions">
     <%= f.submit %>

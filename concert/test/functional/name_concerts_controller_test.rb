@@ -18,7 +18,7 @@ class NameConcertsControllerTest < ActionController::TestCase
 
   test "should create name_concert" do
     assert_difference('NameConcert.count') do
-      post :create, name_concert: { band: @name_concert.band, concert_id: @name_concert.concert_id, final_date: @name_concert.final_date, person: @name_concert.person, place: @name_concert.place, start_date: @name_concert.start_date }
+      post :create, name_concert: { name: @name_concert.name }
     end
 
     assert_redirected_to name_concert_path(assigns(:name_concert))
@@ -35,7 +35,7 @@ class NameConcertsControllerTest < ActionController::TestCase
   end
 
   test "should update name_concert" do
-    put :update, id: @name_concert, name_concert: { band: @name_concert.band, concert_id: @name_concert.concert_id, final_date: @name_concert.final_date, person: @name_concert.person, place: @name_concert.place, start_date: @name_concert.start_date }
+    put :update, id: @name_concert, name_concert: { name: @name_concert.name }
     assert_redirected_to name_concert_path(assigns(:name_concert))
   end
 
