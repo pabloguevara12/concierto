@@ -1,4 +1,7 @@
 Concert::Application.routes.draw do
+  resources :goconcerts
+
+
   resources :name_concerts
 
 

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Datos:</b>
+  <%= @goconcert.data %>
+</p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @goconcert.usuario %>
+</p>
+
+<p>
+  <b>Nombre del Concierto:</b>
+  <%= @goconcert.name_concert %>
+</p>
+
+
+<%= link_to 'Editar', edit_goconcert_path(@goconcert) %> |
+<%= link_to 'Volver', goconcerts_path %>

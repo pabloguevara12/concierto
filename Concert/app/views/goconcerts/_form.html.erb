@@ -1,0 +1,29 @@
+<%= form_for(@goconcert) do |f| %>
+  <% if @goconcert.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@goconcert.errors.count, "error") %> prohibited this goconcert from being saved:</h2>
+
+      <ul>
+      <% @goconcert.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :data %><br />
+    <%= f.text_field :data %>
+  </div>
+  <div class="field">
+    <%= f.label :usuario %><br />
+    <%= f.text_field :usuario %>
+  </div>
+  <div class="field">
+    <%= f.label :name_concert %><br />
+    <%= f.text_field :name_concert %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
