@@ -12,34 +12,34 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :Nombre %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :start_date %><br />
+    <%= f.label :Fecha_de_inicio %><br />
     <%= f.datetime_select :start_date %>
   </div>
   <div class="field">
-    <%= f.label :end_date %><br />
+    <%= f.label :Fecha_de_fin %><br />
     <%= f.datetime_select :end_date %>
   </div>
   
   <div class="field">
-    <%= f.label :site %><br />
+    <%= f.label :Local %><br />
     <%= f.collection_select :site_id, Site.all, :id, :name, :prompt => true %>
   </div>
 
   <div class="field">
-    <%= f.label :band %><br />
+    <%= f.label :Banda %><br />
     <%= f.collection_select :band_id, Band.all, :id, :name, :prompt => true %>
   </div>
 
   <div class="field">
-    <%= f.label :usuario %><br />
+    <%= f.label :Usuario %><br />
     <%= f.collection_select :usuario_id, Usuario.all, :id, :name, :prompt => true %>
   </div>
   
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :Grabar %>
   </div>
 <% end %>

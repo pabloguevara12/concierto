@@ -1,4 +1,7 @@
 Concert::Application.routes.draw do
+  resources :goconcerts
+
+
   resources :name_concerts
 
 
@@ -20,7 +23,7 @@ root :to => "usuarios#index"
 
   match 'logout' => 'usuario_sessions#destroy', as: :logout
     
-  match "/auth/:provider/callback" => "sessions#create"  
+  match "/auth/:provider/callback" => "usuario_sessions#create"  
 
 #get "logout" => "usuario_sessions#destroy", :as => "logout"
 #get "login" => "usuario_sessions#new", :as => "login"
