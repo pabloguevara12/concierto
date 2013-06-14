@@ -9,4 +9,7 @@ validates_presence_of :band_id, :message => '^ Debes elegir un miembro'
 
   has_many :band_usuarios
   has_many :usuarios, :through => :band_usuarios
+
+  has_many :name_concerts
+
 end
