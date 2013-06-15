@@ -7,6 +7,7 @@ class UsuarioSessionsController < ApplicationController
 
 	def create
 		if @usuario = login(params[:email],params[:password], params[:remember_me])
+			session[:usuario_sesion] = @usuario
 			redirect_back_or_to(bands_path, :notice => "Login Exitoso")
 		else
 			flash.now[:alert] = "Su usuario y/o contrasena son incorrectos"
