@@ -8,6 +8,11 @@ class SitesController < ApplicationController
     @sites = Site.all
     @bands = Band.all
     session[:band_sesion] = @bands
+
+      @usuario =  Usuario.new
+      session[:usuario_sesion] = @usuario
+
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @sites }

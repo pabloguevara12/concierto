@@ -2,7 +2,8 @@ class UsuarioSessionsController < ApplicationController
 
 	
 	def new
-		@usuario =  Usuario.new
+		
+
 	end
 
 	def create
@@ -18,6 +19,10 @@ class UsuarioSessionsController < ApplicationController
 	end
 	def destroy
 		logout
+	    @bands = Band.all
+	    session[:band_sesion] = @bands
+	    @usuario =  Usuario.new
+	    session[:usuario_sesion] = @usuario
 		redirect_to(:usuarios, message: "La sesion ha finalizado")
 	end
 end
